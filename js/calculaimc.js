@@ -4,9 +4,9 @@ var titulo = document.querySelector(".titulo");
 var pacientes = document.querySelectorAll(".paciente");
 //loop que busca a informações de todos pacientes
 for(var i = 0; i < pacientes.length;  i ++){
+
     var paciente = pacientes[i];
-
-
+    
     //busca a classe e o conteudo que esta no html 
 var tdaltura = paciente.querySelector(".info-altura");
 var altura = tdaltura.textContent;
@@ -28,7 +28,7 @@ if(peso <= 0 || peso >= 1000){
 if(altura <= 0 || altura >=  3.00){
     alturavalida = false;
     tdimc.textContent = "altura invalida"
-    paciente.classList.add("paciente-invalido") //adicionanod uma nova classe de css
+    paciente.classList.add("paciente-invalido") //adiciona uma nova classe de css
 }
 
 //calculo
@@ -38,3 +38,9 @@ tdimc.textContent = imc.toFixed(2);
 }
 }
 
+function calculaimc(peso, altura){
+    var imc = 0;
+    imc = peso / (altura * altura);
+
+    return imc.toFixed(2);
+}
