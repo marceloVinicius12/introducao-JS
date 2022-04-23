@@ -23,10 +23,12 @@ var alturavalida = true;
 if(peso <= 0 || peso >= 1000){
     pesovalido = false;
     tdimc.textContent = "peso invalido"
+    paciente.classList.add("paciente-invalido")
 }
 if(altura <= 0 || altura >=  3.00){
     alturavalida = false;
     tdimc.textContent = "altura invalida"
+    paciente.classList.add("paciente-invalido") //adicionanod uma nova classe de css
 }
 
 //calculo
